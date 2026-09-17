@@ -190,31 +190,136 @@
   display: none;
 }
 
-/* Responsive styles for smaller screens */
+/* ============================================================
+   RESPONSIVE — Navbar (self-contained, no external overrides)
+   ============================================================ */
+
+@media (max-width: 1080px) {
+  .nav-links a {
+    padding: 9px 11px;
+    font-size: 0.81rem;
+  }
+  .nav-hire span {
+    display: none;
+  }
+  .nav-hire {
+    padding: 0 14px;
+  }
+}
 
 @media (max-width: 860px) {
+  /* Two-column layout: brand on left, actions on right */
+  .nav {
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    padding: 0 10px 0 18px;
+  }
+
+  /* Hide desktop-only elements */
+  .nav > nav,
+  .nav-links,
+  .nav-hire {
+    display: none;
+  }
+
+  /* Brand: single line, vertically centered */
+  .mark {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .mark span {
+    display: none;
+  }
+  .mark b {
+    font-size: 1rem;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Right-side action cluster */
   .nav-right {
+    grid-column: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
     gap: 8px;
-    grid-column: 2;
     height: 100%;
   }
 
-  .nav-burger,
+  /* Theme toggle: square button */
   .toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 42px;
     height: 42px;
     padding: 0;
     flex: 0 0 42px;
-    align-self: center;
+  }
+  .toggle span {
+    display: none;
   }
 
-  .nav {
-    grid-template-columns: 1fr auto;
-    justify-content: space-between;
-    padding: 0 10px 0 18px;
+  /* Burger: SHOW IT and draw the three lines */
+  .nav-burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    flex: 0 0 42px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: color-mix(in srgb, var(--fg) 4%, transparent);
+    cursor: pointer;
+  }
+  .nav-burger span {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 1.5px;
+    background: var(--fg);
+    border-radius: 2px;
+    transition:
+      transform 0.4s var(--ease),
+      background 0.2s;
+  }
+  .nav-burger span::before,
+  .nav-burger span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 1.5px;
+    background: var(--fg);
+    border-radius: 2px;
+    transition:
+      transform 0.4s var(--ease),
+      top 0.3s var(--ease);
+  }
+  .nav-burger span::before {
+    top: -5px;
+  }
+  .nav-burger span::after {
+    top: 5px;
+  }
+  .nav-burger.on span {
+    background: transparent;
+  }
+  .nav-burger.on span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  .nav-burger.on span::after {
+    top: 0;
+    transform: rotate(-45deg);
   }
 }

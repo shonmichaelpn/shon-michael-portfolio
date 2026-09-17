@@ -6,7 +6,6 @@ import App from './App.jsx';
 import './styles/tokens.css';
 import './styles/base.css';
 import './styles/cursor.css';
-import './styles/navbar.css';
 import './styles/drawer.css';
 import './styles/layout.css';
 import './styles/hero.css';
@@ -17,6 +16,7 @@ import './styles/toolkit.css';
 import './styles/timeline.css';
 import './styles/contact.css';
 import './styles/responsive.css';
+import './styles/navbar.css';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
