@@ -2,7 +2,7 @@
 
 .nav {
   position: fixed;
-  top: 18px;
+  top: 32px;
   left: 50%;
   transform: translateX(-50%);
   width: min(calc(100% - 32px), 1100px);
@@ -36,9 +36,9 @@
   translate: 0 0;
 }
 .nav.stuck {
-  top: 10px;
+  top: 24px;
   height: 56px;
-  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
   border-color: var(--line);
 }
 

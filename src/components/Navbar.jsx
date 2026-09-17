@@ -61,7 +61,7 @@ export default function Navbar({ drawerOpen, onToggleDrawer }) {
     <header ref={navRef} className={`nav${stuck ? ' stuck' : ''}`} id="nav">
       <a className="mark" href="#top">
         <b>Shon Michael</b>
-        <span>Full-stack developer · Kochi</span>
+        <span>Full-stack developer</span>
       </a>
 
       <nav aria-label="Sections">
