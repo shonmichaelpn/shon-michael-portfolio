@@ -1,16 +1,65 @@
-.contact{background:var(--paper-2);border-top:1px solid var(--line)}
-.contact h2{margin-bottom:22px;max-width:16ch}
-.contact-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(30px,5vw,64px);align-items:start}
-.links{display:grid;gap:0;border-top:1px solid var(--line)}
-.link{
-  display:grid;grid-template-columns:96px 1fr auto;gap:14px;align-items:center;
-  padding:17px 0;border-bottom:1px solid var(--line);position:relative;
-  transition:padding-left .45s var(--ease);
+.contact {
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
 }
-.link:hover{padding-left:10px}
-.link small{color:var(--mute);font-size:.8rem}
-.link b{font-weight:500;font-size:.98rem;word-break:break-word}
-.link svg{width:15px;height:15px;color:var(--mute);transition:transform .45s var(--ease),color .45s}
-.link:hover svg{transform:translate(4px,-4px);color:var(--signal)}
+.contact h2 {
+  margin-bottom: 22px;
+  max-width: 16ch;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(30px, 5vw, 64px);
+  align-items: start;
+}
+.links {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.link {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  transition: padding-left 0.45s var(--ease);
+}
+.link:hover {
+  padding-left: 10px;
+}
+.link small {
+  color: var(--mute);
+  font-size: 0.8rem;
+}
+.link b {
+  font-weight: 500;
+  font-size: 0.98rem;
+  word-break: break-word;
+}
+.link svg {
+  width: 15px;
+  height: 15px;
+  color: var(--mute);
+  transition:
+    transform 0.45s var(--ease),
+    color 0.45s;
+}
+.link:hover svg {
+  transform: translate(4px, -4px);
+  color: var(--signal);
+}
 
-footer{padding:28px var(--pad);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem;color:var(--mute);margin-left:0}
+footer {
+  padding: 28px var(--pad);
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--mute);
+  margin-left: 0;
+}

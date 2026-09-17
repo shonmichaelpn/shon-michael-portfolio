@@ -10,6 +10,7 @@ const LINKS = [
 ];
 
 export default function Navbar({ drawerOpen, onToggleDrawer }) {
+  const navRef = useRef(null);
   const pillRef = useRef(null);
   const progressRef = useRef(null);
   const linksRef = useRef([]);
@@ -57,7 +58,7 @@ export default function Navbar({ drawerOpen, onToggleDrawer }) {
   }, [active]);
 
   return (
-    <header className={`nav${stuck ? ' stuck' : ''}`}>
+    <header ref={navRef} className={`nav${stuck ? ' stuck' : ''}`} id="nav">
       <a className="mark" href="#top">
         <b>Shon Michael</b>
         <span>Full-stack developer · Kochi</span>
