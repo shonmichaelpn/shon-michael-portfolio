@@ -1,0 +1,25 @@
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:var(--f-ui);font-size:16px;line-height:1.6;
+  font-feature-settings:"ss01","cv05";
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:4px}
+::selection{background:var(--signal);color:#0C1614}
+
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.02;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(2.6rem,7.4vw,5.6rem)}
+h2{font-size:clamp(2rem,4.4vw,3.4rem)}
+h3{font-size:clamp(1.25rem,2.2vw,1.7rem);line-height:1.15}
+p{margin:0;max-width:66ch}
+
+.eyebrow{
+  font-family:var(--f-ui);font-size:.74rem;font-weight:600;letter-spacing:.09em;
+  color:var(--mute);display:flex;align-items:center;gap:10px;margin:0 0 18px;
+}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--signal);flex:none}

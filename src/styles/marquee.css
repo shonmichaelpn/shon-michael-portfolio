@@ -1,0 +1,9 @@
+.marquee{border-block:1px solid var(--line);padding:0;overflow:hidden;background:var(--paper-2)}
+.marquee-track{display:flex;gap:0;width:max-content;animation:slide 34s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.marquee i{
+  font-style:normal;font-family:var(--f-display);font-size:clamp(1.1rem,2.2vw,1.7rem);
+  padding:16px 30px;white-space:nowrap;color:var(--ink-2);display:flex;align-items:center;gap:30px;
+}
+.marquee i::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--signal)}

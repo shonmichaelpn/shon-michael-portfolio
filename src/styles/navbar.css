@@ -1,0 +1,220 @@
+/* Navbar */
+
+.nav {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(calc(100% - 32px), 1100px);
+  z-index: 80;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+  height: var(--nav-h);
+  padding: 0 10px 0 20px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--glass-edge);
+  backdrop-filter: blur(22px) saturate(170%);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  opacity: 0;
+  translate: 0 -18px;
+  transition:
+    opacity 0.8s var(--ease) 0.1s,
+    translate 0.8s var(--ease) 0.1s,
+    height 0.45s var(--ease),
+    background 0.45s var(--ease),
+    border-color 0.45s var(--ease),
+    top 0.45s var(--ease),
+    width 0.45s var(--ease);
+}
+.boot .nav {
+  opacity: 1;
+  translate: 0 0;
+}
+.nav.stuck {
+  top: 10px;
+  height: 56px;
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  border-color: var(--line);
+}
+
+.nav-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, var(--teal), var(--signal));
+  transition: width 0.12s linear;
+}
+
+.mark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+}
+.mark b {
+  font-family: var(--f-display);
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.mark span {
+  font-size: 0.68rem;
+  color: var(--mute);
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  position: relative;
+}
+.nav-links a {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 9px 15px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--mute);
+  white-space: nowrap;
+  transition: color 0.35s var(--ease);
+}
+.nav-links a:hover {
+  color: var(--fg);
+}
+.nav-links a.is-active {
+  color: var(--fg);
+  font-weight: 600;
+}
+.nav-pill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 999px;
+  z-index: 0;
+  background: color-mix(in srgb, var(--teal) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--teal) 28%, transparent);
+  opacity: 0;
+  transition:
+    transform 0.55s var(--ease),
+    width 0.55s var(--ease),
+    opacity 0.4s var(--ease);
+}
+.nav-pill.on {
+  opacity: 1;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 15px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--fg) 4%, transparent);
+  transition:
+    border-color 0.3s var(--ease),
+    transform 0.3s var(--ease),
+    background 0.3s var(--ease);
+}
+.toggle:hover {
+  border-color: var(--teal);
+  transform: translateY(-1px);
+}
+.toggle svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.5s var(--ease);
+}
+.toggle:hover svg {
+  transform: rotate(60deg);
+}
+.nav-hire {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: var(--accent);
+  color: var(--bg);
+  transition:
+    background 0.4s var(--ease),
+    transform 0.3s var(--ease);
+}
+.nav-hire:hover {
+  background: var(--signal);
+  color: #0c1614;
+  transform: translateY(-1px);
+}
+.nav-hire i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulse 2.4s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.65);
+  }
+}
+
+.nav-burger {
+  display: none;
+}
+
+/* Responsive styles for smaller screens */
+
+@media (max-width: 860px) {
+  .nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    grid-column: 2;
+    height: 100%;
+  }
+
+  .nav-burger,
+  .toggle {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    flex: 0 0 42px;
+    align-self: center;
+  }
+
+  .nav {
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    padding: 0 10px 0 18px;
+  }
+}

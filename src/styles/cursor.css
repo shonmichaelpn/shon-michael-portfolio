@@ -1,0 +1,5 @@
+.cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;opacity:0}
+.cursor{width:34px;height:34px;border:1px solid var(--teal);transition:width .3s var(--ease),height .3s var(--ease),background .3s var(--ease),opacity .3s}
+.cursor.is-hot{width:64px;height:64px;background:color-mix(in srgb,var(--teal) 14%,transparent);border-color:transparent}
+.cursor-dot{width:5px;height:5px;background:var(--signal)}
+@media (hover:none),(pointer:coarse){.cursor,.cursor-dot{display:none}}
