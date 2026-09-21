@@ -16,10 +16,9 @@ export default function Contact() {
       <div className="wrap contact-grid">
         <div className="rv">
           <p className="eyebrow">Contact</p>
-          <h2>Tell me what needs closing.</h2>
+          <h2>Get in Touch.</h2>
           <p style={{ color: 'var(--mute)' }}>
-            I read everything and reply within a day. A short description of the
-            problem is more useful to me than a formal brief.
+            I am open to software development opportunities and would be happy to hear from you.
           </p>
         </div>
 

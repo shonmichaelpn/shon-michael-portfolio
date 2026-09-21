@@ -27,9 +27,9 @@ export default function Work() {
       <div className="wrap">
         {!openId && (
           <>
-            <SectionHead eyebrow="Selected work" title="Three platforms, one idea.">
-              Each project turns a messy handoff into a clear workflow, whether the
-              request is a report, a donation or a learner looking for the next step.
+            <SectionHead eyebrow="Selected work" title="Things I've built.">
+              From interactive learning to civic reporting and donation workflows, 
+              each project turns a real-world problem into a working web application.
             </SectionHead>
             <div className="work-list" id="work-list">
               {projects.map(p => (

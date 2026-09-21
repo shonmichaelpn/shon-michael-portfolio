@@ -2,12 +2,15 @@ import SectionHead from './SectionHead';
 
 const COLS = [
   {
-    title: 'Interface',
-    items: ['React', 'JavaScript (ES2023)', 'HTML & semantic markup', 'CSS custom-property systems', 'Responsive grid & motion'],
+    title: 'Full-stack Product',
+    items: ['Next.js', 'React', 'JavaScript', 'TypeScript', 'HTML5 & CSS', 'Tailwind CSS'],
   },
-  { title: 'Server', items: ['Node.js', 'Express', 'REST API design', 'JWT & role-based access', 'Python'] },
-  { title: 'Data', items: ['MongoDB', 'MySQL', 'Schema & relationship design', 'Query optimisation'] },
-  { title: 'Working', items: ['Git & GitHub', 'Postman', 'Agile / Scrum', 'Java, C', 'Cloud & IoT foundations'] },
+  {
+    title: 'Backend & APIs',
+    items: ['Node.js', 'Express.js', 'REST API design', 'JWT Authentication', 'Role-based Access Control', 'Postman'],
+  },
+  { title: 'Data & Systems', items: ['MongoDB', 'Mongoose', 'MySQL', 'Schema design', 'Query optimisation', 'Data modelling'] },
+  { title: 'Delivery & Workflow', items: ['Git & GitHub', 'Vercel', 'Agile / Scrum'] },
 ];
 
 export default function Toolkit() {

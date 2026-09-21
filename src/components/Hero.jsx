@@ -15,10 +15,8 @@ export default function Hero() {
             <span className="word"><span>loop.</span></span>
           </h1>
           <p className="hero-sub">
-            A citizen files a pothole. A charity posts a need. Someone has to
-            receive it, route it, and mark it done. I write the full stack that
-            carries a request from the person who raises it to the person who
-            can actually close it.
+            A citizen files a pothole. A charity posts a need. Someone has to receive it, route it, and close it. 
+            I build the full stack that carries a request from the person who raises it to the person who can act on it.
           </p>
           <div className="hero-cta">
             <a className="btn btn--solid mag" href="#work">
@@ -28,7 +26,7 @@ export default function Hero() {
               </svg>
             </a>
             <a className="btn mag" href="mailto:shonmichaelpn@gmail.com">
-              <span>shonmichaelpn@gmail.com</span>
+              <span>Email me</span>
               <IconOut />
             </a>
           </div>

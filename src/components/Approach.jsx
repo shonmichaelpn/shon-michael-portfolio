@@ -8,24 +8,24 @@ export default function Approach() {
         </div>
         <div className="rv about-body">
           <p>
-            I came to software from mathematics, which mostly taught me to
-            distrust a solution I can't state precisely. So I start every
-            project by writing down who the actors are and what each one is
-            allowed to do — citizen, authority, admin; donor, organisation,
-            admin. Once the permissions are honest, the interface stops arguing
-            with itself.
+            I came to software from mathematics, where I learned to value clarity,
+            structure, and precise solutions. I bring that approach into my projects
+            by first defining the users, their roles, and what each role is allowed to
+            do — citizen, authority, admin; donor, organisation, admin. Starting with
+            clear responsibilities helps me build interfaces and systems that work
+            together consistently.
           </p>
           <p>
-            On the frontend I work in React with a token-based CSS system:
-            colour, type and spacing live as custom properties, components read
-            from them, and a theme is one attribute away. On the backend it's
-            Node, Express and MongoDB, with JWT sessions and route guards that
-            match the roles I wrote down on day one.
+            On the frontend, I work with React, TypeScript, and Next.js, using a
+            design-token-based CSS system where colour, typography, and spacing are
+            managed through reusable custom properties. On the backend, I work with
+            Node.js, Express, and MongoDB, building REST APIs with JWT authentication,
+            role-based access control, and route-level authorization.
           </p>
           <p>
-            I'm finishing an MCA at KTU and I'm looking for a full-stack or
-            frontend role where the product has real users and real
-            consequences.
+            I completed my MCA at KTU and am currently looking for a full-stack or 
+            frontend development role where I can contribute to real products,
+            learn from an experienced team, and continue growing as a developer.
           </p>
 
           <dl className="facts">
