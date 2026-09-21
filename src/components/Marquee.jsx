@@ -1,6 +1,6 @@
 const ITEMS = [
-  'React', 'Node.js', 'Express', 'MongoDB', 'MySQL', 'JWT auth',
-  'REST APIs', 'Role-based access', 'Git', 'Python', 'Java',
+  'React', 'Node.js', 'Express', 'MongoDB', 'MySQL', 'JWT auth', 'Next.js',
+  'REST APIs', 'Role-based access', 'Git', 'Python', 'OOP', 'JavaScript', 'CSS', 
 ];
 
 export default function Marquee() {

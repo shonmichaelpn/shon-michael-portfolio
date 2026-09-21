@@ -101,6 +101,32 @@
   padding: 10px 18px;
   font-size: 0.85rem;
 }
+.js-back svg {
+  animation: back-hint 4.8s ease-in-out infinite;
+}
+.js-back:hover svg,
+.js-back:focus-visible svg {
+  animation-play-state: paused;
+}
+@keyframes back-hint {
+  0%,
+  68%,
+  100% {
+    transform: translateX(0);
+  }
+  73%,
+  79% {
+    transform: translateX(-3px);
+  }
+  76% {
+    transform: translateX(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js-back svg {
+    animation: none;
+  }
+}
 
 .shot {
   position: relative;
@@ -151,8 +177,7 @@
   display: block;
   animation: fade 0.55s var(--ease);
 }
-body.detail-open .work-list,
-body.detail-open .sec-head {
+body.detail-open .work-list {
   display: none;
 }
 @keyframes fade {

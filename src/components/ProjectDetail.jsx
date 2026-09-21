@@ -15,10 +15,12 @@ export default function ProjectDetail({ project: p, onBack }) {
           <h2>{p.title}</h2>
           <p>{p.blurb}</p>
           <div className="d-actions">
-            <a className="btn btn--solid mag" href={p.github} target="_blank" rel="noopener">
-              <span>View source code</span>
-              <IconGit />
-            </a>
+            {p.github && (
+              <a className="btn btn--solid mag" href={p.github} target="_blank" rel="noopener">
+                <span>View source code</span>
+                <IconGit />
+              </a>
+            )}
             {p.demo && (
               <a className="btn mag" href={p.demo} target="_blank" rel="noopener">
                 <span>Live demo</span>

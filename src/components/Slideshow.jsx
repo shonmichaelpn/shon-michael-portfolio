@@ -6,8 +6,6 @@ export default function Slideshow({ project: p }) {
   const trackRef = useRef(null);
 
   const count = p.gallery.length;
-  const folder = p.id === 'cityreport' ? 'CityReport' : 'BridgeAid';
-
   useEffect(() => {
     if (count <= 1) return;
     timerRef.current = setInterval(() => {
@@ -25,7 +23,7 @@ export default function Slideshow({ project: p }) {
   return (
     <div className="slideshow">
       <div className="slide-track" ref={trackRef}>
-        {p.gallery.map((g, i) => (
+        {p.gallery.length > 0 ? p.gallery.map((g, i) => (
           <div key={i}>
             <img
               src={g}
@@ -37,10 +35,17 @@ export default function Slideshow({ project: p }) {
             />
             <div className="ph">
               <b>{p.title} — screen {i + 1}</b>
-              <span>Add /{folder}/ images to your public folder</span>
+              <span>Add screenshots to your public folder</span>
             </div>
           </div>
-        ))}
+        )) : (
+          <div>
+            <div className="ph">
+              <b>{p.title}</b>
+              <span>Screenshots coming soon</span>
+            </div>
+          </div>
+        )}
       </div>
       <div className="dots">
         {p.gallery.map((_, i) => (

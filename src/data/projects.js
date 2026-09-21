@@ -1,6 +1,33 @@
 export const projects = [
 {
-  id:"cityreport", no:"01", title:"CityReport",
+  id:"mentor-ai", no:"01", title:"Mentor AI",
+  blurb:"An interactive programming learning platform that combines structured lessons, coding challenges, deterministic validation and AI-generated mentoring feedback.",
+  tech:["Next.js","TypeScript","React","Tailwind CSS","MongoDB","Mongoose","Gemini API","Vitest"],
+  github:"https://github.com/shonmichaelpn/Mentor-ai",
+  demo:"https://mentor-ai-rosy-eta.vercel.app/",
+  image:"./MentorAI/Mentor_welcome.png",
+  gallery:[
+    "./MentorAI/Mentor_welcome.png",
+    "./MentorAI/Mentor_register.png",
+    "./MentorAI/Mentor_verifymail.png",
+    "./MentorAI/Mentor_login.png",
+    "./MentorAI/Mentor_home.png",
+    "./MentorAI/Mentor_learn.png"
+  ],
+  problem:{t:"Learning to code needs more than a page of documentation.",
+    d:"Learners need a path that explains concepts, checks understanding, gives them a place to practice and responds when their code fails. Without that structure, it is easy to get stuck between passive tutorials and feedback that is too vague to act on."},
+  solution:{t:"A guided learning loop with feedback you can trust.",
+    d:"Mentor AI combines JavaScript and Python lessons with timed knowledge checks, browser-based JavaScript execution and coding challenges. Deterministic validation checks correctness first, then Gemini explains errors and offers mentoring feedback. Progress is saved against the learner's account."},
+  workflow:["Learner chooses a JavaScript or Python path","Lesson introduces a concept with examples","Knowledge check confirms understanding","Learner solves a coding challenge","Validator checks the result deterministically","AI explains mistakes and suggests the next step"],
+  roles:[
+    {t:"Learner",d:"Work through lessons, take timed tests, run JavaScript in the browser and submit coding challenges for feedback."},
+    {t:"Mentor AI",d:"Explain errors and provide targeted guidance based on validated code behavior."},
+    {t:"Platform",d:"Secure accounts with JWT and email OTP verification, persist course progress in MongoDB, and safely handle code execution timeouts."}
+  ],
+  contribution:["Next.js App Router application architecture","JavaScript and Python course content","Browser-based JavaScript runner with timeout handling","Deterministic challenge validation before AI evaluation","Gemini-powered feedback and error explanations","JWT authentication and email OTP registration flow","MongoDB and Mongoose progress persistence","Unit and API tests with Vitest"]
+},
+{
+  id:"cityreport", no:"02", title:"CityReport",
   blurb:"A smart-city infrastructure reporting system. Citizens report public problems; authorities work through them on role-based dashboards instead of a shared inbox.",
   tech:["React","Node.js","Express","MongoDB","JWT","Git","GitHub","Postman"],
   github:"https://github.com/shonmichaelpn/CityReport-Infrastructure_Reporting_System",
@@ -28,7 +55,7 @@ export const projects = [
   contribution:["Full-stack development, end to end","React frontend with role-specific dashboards","Node and Express REST API","MongoDB schema design and integration","JWT authentication with role-based route guards","Testing and debugging across all three roles"]
 },
 {
-  id:"bridgeaid", no:"02", title:"BridgeAid",
+  id:"bridgeaid", no:"03", title:"BridgeAid",
   blurb:"A donation platform that matches what donors actually have with what verified organisations actually need — instead of hoping the two overlap.",
   tech:["Node.js","Express","MongoDB","Git","GitHub"],
   github:"https://github.com/shonmichaelpn/BridgeAid",
@@ -51,4 +78,5 @@ export const projects = [
     {t:"Admin",d:"Verify organisations, monitor activity and keep the platform free of bad actors."}
   ],
   contribution:["Backend development with Node and Express","Frontend implementation","MongoDB data modelling for pledges and requests","Testing across donor, organisation and admin flows","Project documentation"]
-}];
+},
+];

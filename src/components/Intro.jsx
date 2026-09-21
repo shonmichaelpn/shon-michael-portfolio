@@ -34,8 +34,7 @@ export default function Intro() {
             <a
               className="btn mag"
               href="/Shon_Michael_PN_Resume.pdf"
-              target="_blank"
-              rel="noopener"
+              download="Shon_Michael_PN_Resume.pdf"
             >
               <span>Download resume</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">

@@ -26,12 +26,14 @@ export default function Contact() {
         <div className="links rv">
           {LINKS.map(l => {
             const isExt = EXT.includes(l.label);
+            const isResume = l.label === 'Resume';
             return (
               <a
                 className="link mag"
                 href={l.href}
                 key={l.label}
-                {...(isExt ? { target: '_blank', rel: 'noopener' } : {})}
+                {...(isResume ? { download: 'Shon_Michael_PN_Resume.pdf' } : {})}
+                {...(isExt && !isResume ? { target: '_blank', rel: 'noopener' } : {})}
               >
                 <small>{l.label}</small>
                 <b>{l.text}</b>

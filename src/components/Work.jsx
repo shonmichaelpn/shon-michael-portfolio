@@ -9,6 +9,14 @@ export default function Work() {
 
   useEffect(() => {
     document.body.classList.toggle('detail-open', !!openId);
+    if (openId) {
+      requestAnimationFrame(() => {
+        document.getElementById('work')?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    }
     return () => document.body.classList.remove('detail-open');
   }, [openId]);
 
@@ -19,10 +27,9 @@ export default function Work() {
       <div className="wrap">
         {!openId && (
           <>
-            <SectionHead eyebrow="Selected work" title="Two platforms, one idea.">
-              Both are role-based systems where a request has to survive the
-              handoff between strangers. That handoff is the hard part, and it's
-              the part I spend my time on.
+            <SectionHead eyebrow="Selected work" title="Three platforms, one idea.">
+              Each project turns a messy handoff into a clear workflow, whether the
+              request is a report, a donation or a learner looking for the next step.
             </SectionHead>
             <div className="work-list" id="work-list">
               {projects.map(p => (

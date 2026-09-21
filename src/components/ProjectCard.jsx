@@ -12,8 +12,6 @@ export default function ProjectCard({ project: p, onOpen }) {
     card.style.setProperty('--my', e.clientY - r.top + 'px');
   };
 
-  const folder = p.id === 'cityreport' ? 'CityReport' : 'BridgeAid';
-
   return (
     <article
       ref={cardRef}
@@ -39,15 +37,17 @@ export default function ProjectCard({ project: p, onOpen }) {
               <span>Read the case study</span>
               <IconOut />
             </button>
-            <a
-              className="btn btn--sm mag"
-              href={p.github}
-              target="_blank"
-              rel="noopener"
-            >
-              <span>Source</span>
-              <IconGit />
-            </a>
+            {p.github && (
+              <a
+                className="btn btn--sm mag"
+                href={p.github}
+                target="_blank"
+                rel="noopener"
+              >
+                <span>Source</span>
+                <IconGit />
+              </a>
+            )}
             {p.demo && (
               <a
                 className="btn btn--sm mag"
@@ -63,16 +63,18 @@ export default function ProjectCard({ project: p, onOpen }) {
         </div>
 
         <div className="shot">
-          <img
-            src={p.image}
-            alt={`${p.title} interface`}
-            loading="lazy"
-            onLoad={e => e.currentTarget.parentNode.classList.add('has-img')}
-            onError={e => e.currentTarget.remove()}
-          />
+          {p.image && (
+            <img
+              src={p.image}
+              alt={`${p.title} interface`}
+              loading="lazy"
+              onLoad={e => e.currentTarget.parentNode.classList.add('has-img')}
+              onError={e => e.currentTarget.remove()}
+            />
+          )}
           <div className="ph">
             <b>{p.title}</b>
-            <span>Screenshot loads from /{folder}/ in your repo</span>
+            <span>{p.image ? 'Screenshot loads from your public folder' : 'Screenshots coming soon'}</span>
           </div>
         </div>
       </div>
